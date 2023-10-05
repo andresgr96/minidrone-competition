@@ -1,0 +1,67 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "baseSpeed"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "baseSpeed"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "latGain"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "latGain"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_flightControlSystem"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c3_flightControlSystem"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_adjusting"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "adjusting"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_following"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "following"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

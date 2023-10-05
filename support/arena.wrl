@@ -1,8 +1,8 @@
 #VRML V2.0 utf8
 
 PROTO Gantry_part [
-  field SFVec3f trans_G 0 0 0
   field SFRotation rot_G 0 0 0 0
+  field SFVec3f trans_G 0 0 0
 ]
 {
   Transform {
@@ -1013,9 +1013,9 @@ PROTO Gantry_part [
 }
 
 PROTO Gantry_pillar [
-  field SFVec3f trans_GP 0 0 0
-  field SFRotation rot_GP 0 0 0 0
   field SFVec3f scale_GP 1 1 1
+  field SFRotation rot_GP 0 0 0 0
+  field SFVec3f trans_GP 0 0 0
 ]
 {
   Transform {
@@ -1031,12 +1031,12 @@ PROTO Gantry_pillar [
         trans_G 0 0.25 -0.0666
       }
       Gantry_part {
-        trans_G 0.05 0 -0.0666
         rot_G 0 0 1 1.5708
+        trans_G 0.05 0 -0.0666
       }
       Gantry_part {
-        trans_G 0.3 0 -0.0666
         rot_G 0 0 1 1.5708
+        trans_G 0.3 0 -0.0666
       }
     ]
   }
@@ -1067,7 +1067,7 @@ Transform {
   }
 }
 DEF LandingSpot Transform {
-  translation 1.577891 -0.02 3.029442
+  translation 1.382615 -0.02 1.471215
   rotation 0 0 0 0
   children Shape {
     appearance Appearance {
@@ -1093,19 +1093,24 @@ DEF Lines Transform {
       solid FALSE
       coordIndex [
         0, 1, 2, 3, -1, 
-        4, 5, 6, 7, -1 
+        4, 5, 6, 7, -1, 
+        8, 9, 10, 11, -1 
       ]
       convex FALSE
       coord Coordinate {
         point [
-          0.95 -0.02 -0.43387,
-          0.95 -0.02 -1.08226,
-          1.05 -0.02 -1.08226,
-          1.05 -0.02 -0.43387,
-          0.9387328 -0.02 -1.067563,
-          2.775033 -0.02 -1.561267,
-          2.800997 -0.02 -1.464697,
-          0.9646966 -0.02 -0.9709928 
+          0.95 -0.02 -0.21493,
+          0.95 -0.02 -1.05,
+          1.05 -0.02 -1.05,
+          1.05 -0.02 -0.21493,
+          1.013868 -0.02 -1.069337,
+          1.402667 -0.02 -0.4861322,
+          1.319462 -0.02 -0.4306625,
+          0.9306625 -0.02 -1.013868,
+          1.276212 -0.02 -0.4583168,
+          1.383227 -0.02 -1.143328,
+          1.482028 -0.02 -1.127893,
+          1.375013 -0.02 -0.4428816 
         ]
       }
     }
@@ -1321,40 +1326,40 @@ DEF Cage Transform {
       }
     }
     DEF Pole1_pillar Gantry_pillar {
-      trans_GP 0 1.85 -0.3
-      rot_GP 1 0 0 1.5708
       scale_GP 1 1 0.925
+      rot_GP 1 0 0 1.5708
+      trans_GP 0 1.85 -0.3
     }
     DEF Pole2_pillar Gantry_pillar {
-      trans_GP 0 1.85 -4
-      rot_GP 1 0 0 1.5708
       scale_GP 1 1 0.925
+      rot_GP 1 0 0 1.5708
+      trans_GP 0 1.85 -4
     }
     DEF Pole3_pillar Gantry_pillar {
-      trans_GP 3.7 1.85 -4
-      rot_GP 1 0 0 1.5708
       scale_GP 1 1 0.925
+      rot_GP 1 0 0 1.5708
+      trans_GP 3.7 1.85 -4
     }
     DEF Pole4_pillar Gantry_pillar {
-      trans_GP 3.7 1.85 -0.3
-      rot_GP 1 0 0 1.5708
       scale_GP 1 1 0.925
+      rot_GP 1 0 0 1.5708
+      trans_GP 3.7 1.85 -0.3
     }
     DEF Pole5_pillar Gantry_pillar {
-      trans_GP 2 3.7 0
       rot_GP 0 1 0 1.5708
+      trans_GP 2 3.7 0
     }
     DEF Pole6_pillar Gantry_pillar {
-      trans_GP 2 3.7 -3.7
       rot_GP 0 1 0 1.5708
+      trans_GP 2 3.7 -3.7
     }
     DEF Pole7_pillar Gantry_pillar {
-      trans_GP 0 3.7 -2
       scale_GP 1 1 0.85
+      trans_GP 0 3.7 -2
     }
     DEF Pole8_pillar Gantry_pillar {
-      trans_GP 3.7 3.7 -2
       scale_GP 1 1 0.85
+      trans_GP 3.7 3.7 -2
     }
   ]
 }
@@ -1417,7 +1422,7 @@ DEF Static_Objects Transform {
   ]
 }
 DEF QuadBody Transform {
-  translation 0.48387 0.001765 1
+  translation 0.26493 0.001765 1
   scaleOrientation 0 1 0 0
   children [
     DEF UAV_Collision Transform {
@@ -1485,12 +1490,12 @@ DEF QuadBody Transform {
 }
 DEF IsoNoRotation Viewpoint {
   description "Isometric - No Rotation"
-  position 1.38477 0.670765 1.99
+  position 1.16583 0.670765 1.99
   orientation -0.46727 0.858698 0.210466 0.847752
 }
 DEF OnQuadNoRotation Viewpoint {
   description "Chase - No Rotation"
-  position -2.51613 1.001765 1
+  position -2.73507 1.001765 1
   orientation 0 -1 -0 1.57
 }
 DEF BlueMarker Transform {
