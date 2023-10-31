@@ -1067,7 +1067,7 @@ Transform {
   }
 }
 DEF LandingSpot Transform {
-  translation 2.080575 -0.02 2.324134
+  translation 1.320727 -0.02 2.013327
   rotation 0 0 0 0
   children Shape {
     appearance Appearance {
@@ -1093,19 +1093,29 @@ DEF Lines Transform {
       solid FALSE
       coordIndex [
         0, 1, 2, 3, -1, 
-        4, 5, 6, 7, -1 
+        4, 5, 6, 7, -1, 
+        8, 9, 10, 11, -1, 
+        12, 13, 14, 15, -1 
       ]
       convex FALSE
       coord Coordinate {
         point [
-          0.984814 -0.02 -0.1104222,
-          0.2392522 -0.02 -0.548426,
-          0.2899059 -0.02 -0.6346478,
-          1.035468 -0.02 -0.1966441,
-          0.2376836 -0.02 -0.5761649,
-          2.094205 -0.02 -1.970426,
-          2.154256 -0.02 -1.890465,
-          0.2977351 -0.02 -0.4962036 
+          1.196287 -0.02 -0.1676378,
+          0.3525578 -0.02 -0.506143,
+          0.389793 -0.02 -0.5989522,
+          1.233522 -0.02 -0.260447,
+          0.3555153 -0.02 -0.5678117,
+          1.293952 -0.02 -0.8434647,
+          1.322135 -0.02 -0.7475182,
+          0.3836983 -0.02 -0.4718653,
+          1.235024 -0.02 -0.7152738,
+          0.8642738 -0.02 -1.538116,
+          0.9554464 -0.02 -1.579196,
+          1.326196 -0.02 -0.7563536,
+          0.8899143 -0.02 -1.571043,
+          1.775923 -0.02 -1.413676,
+          1.758436 -0.02 -1.315217,
+          0.8724266 -0.02 -1.472584 
         ]
       }
     }
@@ -1417,7 +1427,7 @@ DEF Static_Objects Transform {
   ]
 }
 DEF QuadBody Transform {
-  translation 0.17886 0.001765 0.96703
+  translation 0.23266 0.001765 1.1685
   scaleOrientation 0 1 0 0
   children [
     DEF UAV_Collision Transform {
@@ -1485,12 +1495,12 @@ DEF QuadBody Transform {
 }
 DEF IsoNoRotation Viewpoint {
   description "Isometric - No Rotation"
-  position 1.07976 0.670765 1.95703
+  position 1.13356 0.670765 2.1585
   orientation -0.46727 0.858698 0.210466 0.847752
 }
 DEF OnQuadNoRotation Viewpoint {
   description "Chase - No Rotation"
-  position -2.82114 1.001765 0.96703
+  position -2.76734 1.001765 1.1685
   orientation 0 -1 -0 1.57
 }
 DEF BlueMarker Transform {
